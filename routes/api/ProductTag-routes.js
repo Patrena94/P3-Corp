@@ -47,10 +47,40 @@
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-});
+//   ProductTag.update(req.body, {
+//     where: {id: req.params.id
+//     }
+//   })
+// .then(dbProductTagData =>{
+//   if(!dbProductTagData[0]){
+//     res.status(404).json({ message: 'ProductTag not found with this id'});
+//   return;
+// }
+// res.json(dbProductTagData);
+// })
+// .catch(err =>{
+//   console.log(err);
+//   res.status(500).json(err);
+// });
+// });
+// // delete on ProductTag by its `id` value
+// router.delete('/:id', (req, res) => {
+//   ProductTag.destroy({
+//     where: {id: req.params.id
+//     }
+//   })
+//   .then(dbProductTagData=>{
+//   if(!dbProductTagData){
+//     res.status(404).json({ message: "No Category found with this id"});
+//   }
+//   res.json(dbProductTagData);
+//   })
+//   .catch(err => {
+//   console.log(err);
+//   res.status(500).json(err);
+//   });
+//   });
+// });
 
-router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
-});
-
-module.exports = router;
+// module.exports = router;
+})
