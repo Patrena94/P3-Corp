@@ -1,39 +1,54 @@
 const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
+const { findAll } = require('../../models/Category');
 
 // The `/api/products` endpoint
 
 // get all products
 router.get('/', (req, res) => {
-  // find all products
+  Product.findAll()
+ .then(dbProductData => res.json(dbProductData))
+ .catch(err => {
+   console.log(err);
+  res.status(500).json(err);
+ });
+
   // be sure to include its associated Category and Tag data
 });
 
 // get one product
 router.get('/:id', (req, res) => {
-  // find a single product by its `id`
+Product.findOne({
+  where: {id: req.params.id
+  }
+})
+.then(dbProductData => {
+  if(dbProductData){
+    res.status(404).json({message:"Product not found!"});
+    return;
+  }
+  res.json(dbProductData);
+})
+.catch(err=>{
+  console.log(err);
+  res.status(500).json(err);
+})
   // be sure to include its associated Category and Tag data
 });
 
 // create new product
 router.post('/', (req, res) => {
-  /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-    }
-  */
-  Product.create(req.body)
+  Product.create({
+    Product_name: "Basketball",
+    Price: 200.00,
+    Stock:3,
+    tag_id:[1, 2, 3, 4]
+  })
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
-          return {
-            product_id: product.id,
-            tag_id,
-          };
+          return 
         });
         return ProductTag.bulkCreate(productTagIdArr);
       }
