@@ -3,18 +3,19 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
-const { Sequelize } = require('sequelize/types');
+// const { Sequelize } = require('sequelize/types');
 const sequelize = require('../config/connection');
+const { Sequelize } = require('sequelize/types');
 
 // Products belongsTo Category
-class Products extends category{}
-Products.init({
+class Products extends Category{}
+Product.init({
   product_name: Sequelize.STRING,
-  id: sequelize.STRING,
-  price: sequelize.STRING,
-  stock:  sequelize.STRING,
-  category_id: sequelize.STRING
-},{ Sequelize, Category: 'product'});
+  id: Sequelize.STRING,
+  price: Sequelize.STRING,
+  stock:  Sequelize.STRING,
+  category_id: Sequelize.STRING
+},{ sequelize, Category: 'product'});
 Products.belongsTo(Category);
 // Categories have many Products
 const Categories =Product.hasMany(Tag,{as:'categories'});
@@ -29,7 +30,7 @@ product_name:'Plain T-Shirt',
 })
 Categories.belongsToMany(Product)
 // Products belongToMany Tags (through ProductTag)
-Product.create({
+Products.create({
   id:1, 
   product_name: 'Plain T-Shirt',
   tags: [
@@ -39,7 +40,7 @@ Product.create({
 },{
   include:[Tag]
 })
-Product.belongsToMany(Tag);
+Products.belongsToMany(Tag);
 
 // Tags belongToMany Products (through ProductTag)
 class Tags extends ProductTag{}
