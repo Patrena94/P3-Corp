@@ -8,46 +8,25 @@ const sequelize = require('../config/connection');
 const { Sequelize } = require('sequelize');
 
 // Products belongsTo Category
-class Product extends Category{}
-Products.init({
-  id: Sequelize.STRING,
-  product_name: Sequelize.STRING,
-  price: Sequelize.STRING,
-  stock:  Sequelize.STRING,
-  category_id: Sequelize.STRING
-},{ sequelize, Category: 'product'});
-Products.belongsTo(Category);
+
+Product.belongsTo(Category);
+
 // Categories have many Products
-const Categories =Product.hasMany(Tag,{as:'categories'});
-Product.create({
-  id: 1,
-product_name:'Plain T-Shirt',
-  categories:[{id: 1, product_name:'Alpha'},
-        { id: 2, product_name: 'Beta'} 
- ]
-}, {
-  include:[{association: Categories, as: "categories"}]
-})
-Categories.belongsToMany(Product)
+Category.hasMany(Product);
+
 // Products belongToMany Tags (through ProductTag)
-Products.create({
-  id:1, 
-  product_name: 'Plain T-Shirt',
-  tags: [
-    {product_name: 'Alpha'},
-    {product_name:'Beta'}
-  ]
-},{
-  include:[Tag]
-})
-Products.belongsToMany(Tag);
+
+Product.belongsToMany(Tag, {
+  through: ProductTag,
+  foreignKey:'product_id'
+  });
 
 // Tags belongToMany Products (through ProductTag)
-class Tags extends ProductTag{}
-Tag.init({
- tag_name: Sequelize.STRING
-}, {sequelize, ProductTag: 'tag'});
-Tag.belongsToMany(ProductTag);
+
+Tag.belongsToMany(Product, {
+  through: ProductTag,
+  foreignKey: 'tag_id',
+});
 
 module.exports = {
   Product,

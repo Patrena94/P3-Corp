@@ -33,12 +33,6 @@ router.get('/:id', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
-  // .then ((category)=> {
-  //   return Product.findall({ where:{
-  //     category_id: req.params.id
-  //   }
-  // });
-  // })
 });
 
 router.post('/', (req, res) => {
