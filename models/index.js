@@ -5,13 +5,13 @@ const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 // const { Sequelize } = require('sequelize/types');
 const sequelize = require('../config/connection');
-const { Sequelize } = require('sequelize/types');
+const { Sequelize } = require('sequelize');
 
 // Products belongsTo Category
-class Products extends Category{}
-Product.init({
-  product_name: Sequelize.STRING,
+class Product extends Category{}
+Products.init({
   id: Sequelize.STRING,
+  product_name: Sequelize.STRING,
   price: Sequelize.STRING,
   stock:  Sequelize.STRING,
   category_id: Sequelize.STRING

@@ -15,7 +15,12 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Category.findOne({
     where: {id: req.params.id
-    }
+    },
+    include: [
+      {mode: Product,
+      attributes:['id', "product_name", "price","stock","category_id"],
+    },
+    ],
   })
   .then(dbCategoryData => {
     if(dbCategoryData){
@@ -27,13 +32,13 @@ router.get('/:id', (req, res) => {
   .catch(err=>{
     console.log(err);
     res.status(500).json(err);
-  })
-  .then ((category)=> {
-    return Product.findall({ where:{
-      category_id: req.params.id
-    }
   });
-  })
+  // .then ((category)=> {
+  //   return Product.findall({ where:{
+  //     category_id: req.params.id
+  //   }
+  // });
+  // })
 });
 
 router.post('/', (req, res) => {
