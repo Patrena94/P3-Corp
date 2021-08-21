@@ -1,5 +1,5 @@
 const router = require('express').Router(); 
-const { Sequelize } = require('sequelize/types');
+// const { Sequelize } = require('sequelize/types');
 const sequelize = require('../../config/connection');
 const { Category, Product } = require('../../models');
 
@@ -26,11 +26,11 @@ router.get('/:id', (req, res) => {
   Category.findOne({
     where: {id: req.params.id
     },
-    attributes: [
-      'id',
-      'category_name',
-    [sequelize.literal(`(SELECT ONE (*)FROM Product Where Category.id = Category_id )`),'Products']
-  ],
+  //   attributes: [
+  //     'id',
+  //     'category_name',
+  //   [sequelize.literal(`(SELECT ONE (*)FROM Product Where Category.id = Category_id )`),'Products']
+  // ],
     include: [
       {model: Product,
       attributes:['id', "product_name", "price","stock","category_id"],
@@ -49,10 +49,11 @@ router.get('/:id', (req, res) => {
     res.status(500).json(err);
   });
 });
-
+// create a new category
 router.post('/', (req, res) => {
+  console.log("LOGGING BODY",req.body)
   Category.create({
-    id: req.body.id,
+    // id: req.body.id,
     category_name: req.body.category_name,
   })
   .then(dbCategoryData => res.json(dbCategoryData))
@@ -61,14 +62,17 @@ router.post('/', (req, res) => {
     res.status(500).json(err);
   });
 });
-
+// update a category by its `id` value
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
   Category.update(req.body, {
+    category_name: req.body.category_name
+  },
+  {
     where: {
       id: req.params.id
     }
-  })
+  }
+  )
   .then(dbCategoryData=>{
     if(!dbCategoryData[0]){
       res.status(404).json({message: "Category no found relating to this id"});
@@ -80,7 +84,7 @@ router.put('/:id', (req, res) => {
     res.status(500).json(err);
   });
 });
-
+  // delete a category by its `id` value
 router.delete('/:id', (req, res) => {
   category.destroy({
     where: {id: req.params.id
