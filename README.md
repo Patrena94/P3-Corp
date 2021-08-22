@@ -6,18 +6,21 @@
 
 
  # Project Description
-    PS Corp’s back end for your e-commerce site. The application will provide owners with vital statistic on stock.  This will allow for owners to determine revenue flow; popularity of item; as well as make adjustment in terms of marketing based on sales.  The application tracks product, stock, and by Category. The application also allows for owners to easily updates Tag, categories, and products.    
+PS Corp’s back end for your e-commerce site. The application will provide owners with vital statistic on stock.  This will allow for owners to determine revenue flow; popularity of item; as well as make adjustment in terms of marketing based on sales.  The application tracks product, stock, and by Category. The application also allows for owners to easily updates Tag, categories, and products.    
 
 
  # Table of Content 
- 1.Description
- 2.Installation
- 3.Usage
- 4.License
- 5.Contributors
- 6.Test Instructions
+ 1.[License](#License)
+ 2.[Project Description](#Project Description)
+ 3.[Questions](#Questions)
+ 4.[Installation Instructions](#Installation)
+ 5.[Usage Information](#Usage Information)
+    A.[Screencastify](#Sreencastify)
+ 6.[Contribution Guidelines](#Contribution Guidelines)
+ 7.[Test Instructions](#Test Instructions)
+ 8.[Application Preview:](#Application Preview:)
 
- #Questions  
+ # Questions  
 
  User with questions about this project should contact me at patrena@sbcglobal.net.  You may also review my portfolio at Patrena Github repository(https://github.com/Patrena94).
  
@@ -36,10 +39,10 @@ The user can view a walk through video of the above description by clicking the 
 
 
 MYSQL walk through video
-https://drive.google.com/file/d/14RYjvhTw-omMfUhR_gZOI6XUaUj6yfAb/view
+https://drive.google.com/file/d/1JR4sCwWofVljpDXzEDRwQJ1x5x9cSxWC/view
 
 Prompt walk through video:
-https://drive.google.com/file/d/1mC29C-Jl4LV3e5xKORujzuUSF_Yy5wAa/view
+https://drive.google.com/file/d/1VBOVBOg3lgChAzFXdHUHqSuJ22svj9ZG/view
  
  
   
@@ -50,7 +53,7 @@ User interested in contributing to the project will need to create their own bra
 # Test Instructions
 To test the seeds.sql and schema.sql files, the user will need to type in the SHOW DATABASES;.The owner should then enter the following commands to view the current database: USE ecommerce_db; to select the database.  The following codes for Table review: (SELECT * FROM Category; -> SHOW FIELD FROM CATEGORY;), (SELECT * FROM Product; -> SHOW FIELDS FROM PRODUCT;), and ;), (SELECT * FROM Tag; -> SHOW FIELDS FROM TAG;). The owner should repeat the process at the end to view updated tables. 
 
-#Application Preview:
+# Application Preview:
 
 ![image](https://user-images.githubusercontent.com/83892241/130341391-b3a1c05d-773d-4846-a628-b6cef7c88051.png)
 ![image](https://user-images.githubusercontent.com/83892241/130341395-84381c29-0676-483a-8537-bf76a4e3152a.png)
