@@ -20,13 +20,13 @@ PS Corp’s back end for your e-commerce site. The application will provide owne
 
  5.[Usage](#Usage)
 
- A.[Screencastify](#Sreencastify)
+ 6.[Screencastify](#Sreencastify)
 
- 6.[Contribution](#Contribution)
+ 7.[Contribution](#Contribution)
 
- 7.[Test](#Test)
+ 8.[Test](#Test)
 
- 8.[Screenshots](#Screenshots)
+ 9.[Screenshots](#Screenshots)
 
  # Questions  
 
