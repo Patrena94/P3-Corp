@@ -53,10 +53,10 @@ https://drive.google.com/file/d/1JR4sCwWofVljpDXzEDRwQJ1x5x9cSxWC/view
 
 Insomnia walk through video:
 https://drive.google.com/file/d/1wgCKZz9KpmfWMUNBAsusZJBl6_Tp7ChP/view
-https://drive.google.com/file/d/1wgCKZz9KpmfWMUNBAsusZJBl6_Tp7ChP/view
  
 MYSQL walk through video (New Table) 
 https://drive.google.com/file/d/1JAE-Sh-RB2AHU4cfPaJrynbAgwhsOoiU/view
+https://drive.google.com/file/d/1_aF3nbFTkkABAsyAFUEFeKwnELd8gpRC/view
 
   
 # Contribution
