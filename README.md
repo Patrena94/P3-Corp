@@ -20,7 +20,7 @@ PS Corp’s back end for your e-commerce site. The application will provide owne
 
  5.[Usage](#Usage)
 
- 6.[Screencastify](#Sreencastify)
+ 6.[Screencastify](#Screencastify)
 
  7.[Contribution](#Contribution)
 
@@ -55,6 +55,7 @@ Insomnia walk through video:
 https://drive.google.com/file/d/1wgCKZz9KpmfWMUNBAsusZJBl6_Tp7ChP/view
  
 MYSQL walk through video (New Table) 
+
 https://drive.google.com/file/d/1JAE-Sh-RB2AHU4cfPaJrynbAgwhsOoiU/view
 https://drive.google.com/file/d/1_aF3nbFTkkABAsyAFUEFeKwnELd8gpRC/view
 
