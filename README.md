@@ -12,21 +12,21 @@ PS Corp’s back end for your e-commerce site. The application will provide owne
  # Table of Content 
  1.[License](#License)
 
- 2.[Project Description](#Project Description)
+ 2.[Project Description](#ProjectDescription)
 
  3.[Questions](#Questions)
 
  4.[Installation Instructions](#Installation)
 
- 5.[Usage Information](#Usage Information)
+ 5.[Usage Information](#UsageInformation)
 
     A.[Screencastify](#Sreencastify)
 
- 6.[Contribution Guidelines](#Contribution Guidelines)
+ 6.[Contribution Guidelines](#ContributionGuidelines)
 
- 7.[Test Instructions](#Test Instructions)
- 
- 8.[Application Preview:](#Application Preview:)
+ 7.[Test Instructions](#TestInstructions)
+
+ 8.[Application Preview](#ApplicationPreview:)
 
  # Questions  
 
@@ -45,7 +45,7 @@ The owner will need to set up an Insomnia account.  The owner will create a new 
 
 The user can view a walk through video of the above description by clicking the two links below. The video was created utilizing Screencastify in five minute or less intervals.
 
-
+# Screencastify
 MYSQL walk through video
 https://drive.google.com/file/d/1JR4sCwWofVljpDXzEDRwQJ1x5x9cSxWC/view
 
