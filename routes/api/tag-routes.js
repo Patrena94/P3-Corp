@@ -14,12 +14,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Category.findOne({
+  Tag.findOne({
     where: {id: req.params.id
     }
   })
   .then(dbTagData => {
-    if(dbTagData){
+    if(!dbTagData){
       res.status(404).json({message:"Tag not found!"});
       return;
     }
@@ -28,13 +28,14 @@ router.get('/:id', (req, res) => {
   .catch(err=>{
     console.log(err);
     res.status(500).json(err);
-  })
-  .then ((Tag)=> {
-    return ProductTag.findall({ where:{
-      Tag_id: req.params.id }
+  });
 });
-})
-})
+//   .then ((Tag)=> {
+//     return ProductTag.findall({ where:{
+//       Tag_id: req.params.id }
+// });
+// })
+// })
 router.post('/', (req, res) => {
   Tag.create({
     id: req.body.id,

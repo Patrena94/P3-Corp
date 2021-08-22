@@ -26,11 +26,6 @@ router.get('/:id', (req, res) => {
   Category.findOne({
     where: {id: req.params.id
     },
-  //   attributes: [
-  //     'id',
-  //     'category_name',
-  //   [sequelize.literal(`(SELECT ONE (*)FROM Product Where Category.id = Category_id )`),'Products']
-  // ],
     include: [
       {model: Product,
       attributes:['id', "product_name", "price","stock","category_id"],
@@ -38,7 +33,7 @@ router.get('/:id', (req, res) => {
     ],
   })
   .then(dbCategoryData => {
-    if(dbCategoryData){
+    if(!dbCategoryData){
       res.status(404).json({message:"Category not found!"});
       return;
     }
@@ -63,20 +58,18 @@ router.post('/', (req, res) => {
 });
 // update a category by its `id` value
 router.put('/:id', (req, res) => {
-  Category.update(req.body, {
-    category_name: req.body.category_name
-  },
-  {
+  Category.update(req.body,{
     where: {
       id: req.params.id
     }
-  }
-  )
+  }) 
   .then(dbCategoryData=>{
-    if(!dbCategoryData[0]){
+    if(!dbCategoryData){
       res.status(404).json({message: "Category not found relating to this id"});
       return;
     }
+    console.log('change value',dbCategoryData)
+    res.json(dbCategoryData)
   })
   .catch(err=>{
     console.log(err);

@@ -23,7 +23,7 @@ Product.findOne({
   }
 })
 .then(dbProductData => {
-  if(dbProductData){
+  if(!dbProductData){
     res.status(404).json({message:"Product not found!"});
     return;
   }
@@ -65,7 +65,7 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-    .then((product) => {
+    .then((dbProduct) => {
       // find all associated tags from ProductTag
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
@@ -107,7 +107,7 @@ router.delete('/:id', (req, res) => {
 })
 .then(dbProductData=>{
 if(!dbProductData){
-  res.status(404).json({ message: "No Category found with this id"});
+  res.status(404).json({ message: "No Product found with this id"});
 }
 res.json(dbProductData);
 })
