@@ -11,13 +11,21 @@ PS Corp’s back end for your e-commerce site. The application will provide owne
 
  # Table of Content 
  1.[License](#License)
+
  2.[Project Description](#Project Description)
+
  3.[Questions](#Questions)
+
  4.[Installation Instructions](#Installation)
+
  5.[Usage Information](#Usage Information)
+
     A.[Screencastify](#Sreencastify)
+
  6.[Contribution Guidelines](#Contribution Guidelines)
+
  7.[Test Instructions](#Test Instructions)
+ 
  8.[Application Preview:](#Application Preview:)
 
  # Questions  
