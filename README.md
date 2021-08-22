@@ -5,28 +5,28 @@
 ![Build Status](https://img.shields.io/github/license/Patrena94/P3-Corp)  
 
 
- # Project Description
+ # Description
 PS Corp’s back end for your e-commerce site. The application will provide owners with vital statistic on stock.  This will allow for owners to determine revenue flow; popularity of item; as well as make adjustment in terms of marketing based on sales.  The application tracks product, stock, and by Category. The application also allows for owners to easily updates Tag, categories, and products.    
 
 
  # Table of Content 
  1.[License](#License)
 
- 2.[Project Description](#ProjectDescription)
+ 2.[Description](#Description)
 
  3.[Questions](#Questions)
 
- 4.[Installation Instructions](#Installation)
+ 4.[Installation](#Installation)
 
- 5.[Usage Information](#UsageInformation)
+ 5.[Usage](#Usage)
 
-    A.[Screencastify](#Sreencastify)
+ A.[Screencastify](#Sreencastify)
 
- 6.[Contribution Guidelines](#ContributionGuidelines)
+ 6.[Contribution](#Contribution)
 
- 7.[Test Instructions](#TestInstructions)
+ 7.[Test](#Test)
 
- 8.[Application Preview](#ApplicationPreview:)
+ 8.[Screenshots](#Screenshots)
 
  # Questions  
 
@@ -38,7 +38,7 @@ PS Corp’s back end for your e-commerce site. The application will provide owne
   The User will need to install the inquirer(https://www.npmjs.com/package/inquirer, Express .js API (npm i express),MYSQL2 (https://www.npmjs.com/package/mysql2), Sequelize(https://www.npmjs.com/package/sequelize) and doteny Package (https://www.npmjs.com/package/doteny) packages in order to operate and initiate this application. 
 
 
-# Usage Information
+# Usage
  The user will need initiate the application by typing into the command line mysql -u root -p. The user will be prompted to enter their password.  The user will need to type in the SHOW DATABASES;.The owner should then enter the following commands to view the current database: USE ecommerce_db; to select the database.  The following codes for Table review: (SELECT * FROM Category; -> SHOW FIELD FROM CATEGORY;), (SELECT * FROM Product; -> SHOW FIELDS FROM PRODUCT;), and ;), (SELECT * FROM Tag; -> SHOW FIELDS FROM TAG;). The owner should repeat the process at the end to view updated tables. 
 In the command line of Visual Studio the owner will need to imitate the following commands: npm run seed and nodemon (or npm start (user’s preference).
 The owner will need to set up an Insomnia account.  The owner will create a new collection. The collection will consist of adding a title. Created three folders. The folders will collate with the three tables that are being reviewed (Tag, Product, and Category).  The folder will contain a total of five “CRUD” files that will populated through routes that have been set up in Visual Studio. The files will allow the user to view the initial data; create data, update date, delete data, and query the data. 
@@ -46,22 +46,27 @@ The owner will need to set up an Insomnia account.  The owner will create a new 
 The user can view a walk through video of the above description by clicking the two links below. The video was created utilizing Screencastify in five minute or less intervals.
 
 # Screencastify
-MYSQL walk through video
+
+
+MYSQL walk through video (Original Table)
 https://drive.google.com/file/d/1JR4sCwWofVljpDXzEDRwQJ1x5x9cSxWC/view
 
-Prompt walk through video:
-https://drive.google.com/file/d/1VBOVBOg3lgChAzFXdHUHqSuJ22svj9ZG/view
+Insomnia walk through video:
+https://drive.google.com/file/d/1wgCKZz9KpmfWMUNBAsusZJBl6_Tp7ChP/view
+https://drive.google.com/file/d/1wgCKZz9KpmfWMUNBAsusZJBl6_Tp7ChP/view
  
- 
+MYSQL walk through video (New Table) 
+https://drive.google.com/file/d/1JAE-Sh-RB2AHU4cfPaJrynbAgwhsOoiU/view
+
   
-# Contribution Guidelines
+# Contribution
 User interested in contributing to the project will need to create their own branch in GitHub.  They may submit changes and updates to be incorporated into the app for approval by the owner.  Individual may also fork the application to their individual accounts.  
 
 
-# Test Instructions
+# Test
 To test the seeds.sql and schema.sql files, the user will need to type in the SHOW DATABASES;.The owner should then enter the following commands to view the current database: USE ecommerce_db; to select the database.  The following codes for Table review: (SELECT * FROM Category; -> SHOW FIELD FROM CATEGORY;), (SELECT * FROM Product; -> SHOW FIELDS FROM PRODUCT;), and ;), (SELECT * FROM Tag; -> SHOW FIELDS FROM TAG;). The owner should repeat the process at the end to view updated tables. 
 
-# Application Preview:
+# Screenshots
 
 ![image](https://user-images.githubusercontent.com/83892241/130341391-b3a1c05d-773d-4846-a628-b6cef7c88051.png)
 ![image](https://user-images.githubusercontent.com/83892241/130341395-84381c29-0676-483a-8537-bf76a4e3152a.png)

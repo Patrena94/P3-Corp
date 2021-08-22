@@ -30,12 +30,7 @@ router.get('/:id', (req, res) => {
     res.status(500).json(err);
   });
 });
-//   .then ((Tag)=> {
-//     return ProductTag.findall({ where:{
-//       Tag_id: req.params.id }
-// });
-// })
-// })
+
 router.post('/', (req, res) => {
   Tag.create({
     id: req.body.id,
